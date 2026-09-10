@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Weekly Update — Sept 8–11, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#20211d;
+    --ink-soft:#54564e;
+    --paper:#faf7f0;
+    --card:#ffffff;
+    --line:#e7e2d6;
+
+    --cooper:#0f8a7e;
+    --cooper-deep:#0a5f57;
+    --cooper-wash:#e6f4f1;
+    --cooper-line:#bfe3dd;
+
+    --tucker:#e08a1e;
+    --tucker-deep:#a8620c;
+    --tucker-wash:#fdf1dd;
+    --tucker-line:#f3d9a8;
+
+    --cal:#5b4a8a;
+    --cal-wash:#efeaf7;
+    --cal-line:#d7cdec;
+
+    --sport:#c2410c;
+    --sport-deep:#9a3208;
+    --sport-wash:#fbeae0;
+    --sport-line:#f0c9b0;
+
+    --scout:#2f6b3d;
+    --scout-deep:#1f4a2a;
+    --scout-wash:#e7f1e6;
+    --scout-line:#c2ddc2;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    line-height:1.6;
+    font-size:16px;
+  }
+  .sheet{
+    max-width:820px;
+    margin:0 auto;
+    padding:32px 22px 60px;
+  }
+
+  /* Masthead */
+  .masthead{
+    text-align:center;
+    padding:14px 0 22px;
+    border-bottom:2px solid var(--ink);
+  }
+  .masthead .kicker{
+    font-size:.74rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    font-weight:600;
+  }
+  .masthead h1{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:clamp(2.6rem,9vw,4rem);
+    line-height:.98;
+    margin:.18em 0 .12em;
+    letter-spacing:-.01em;
+  }
+  .masthead .dateline{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:1.15rem;
+    color:var(--ink-soft);
+  }
+  .masthead .dateline b{
+    font-style:normal;
+    font-weight:600;
+    color:var(--ink);
+  }
+
+  section{margin-top:34px;}
+  .sec-title{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:1.6rem;
+    margin:0 0 14px;
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .sec-title .grade{
+    font-family:'Inter',sans-serif;
+    font-size:.72rem;
+    font-weight:600;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    padding:3px 10px;
+    border-radius:100px;
+    position:relative;
+    top:-3px;
+  }
+
+  /* Calendar callout */
+  .calendar{
+    background:var(--cal-wash);
+    border:1px solid var(--cal-line);
+    border-radius:14px;
+    padding:22px 24px;
+  }
+  .calendar h2{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:1.5rem;
+    margin:0 0 4px;
+    color:#3d3068;
+  }
+  .calendar .sub{
+    font-size:.9rem;
+    color:var(--ink-soft);
+    margin:0 0 16px;
+  }
+  .cal-list{list-style:none;margin:0;padding:0;}
+  .cal-list li{
+    display:flex;
+    gap:16px;
+    padding:11px 0;
+    border-top:1px solid var(--cal-line);
+    align-items:baseline;
+  }
+  .cal-list li:first-child{border-top:none;}
+  .cal-when{
+    flex:0 0 118px;
+    font-weight:600;
+    font-size:.9rem;
+    color:#3d3068;
+    line-height:1.35;
+  }
+  .cal-when small{display:block;font-weight:500;color:var(--ink-soft);font-size:.82rem;}
+  .cal-what{flex:1;}
+  .cal-what .who{
+    font-size:.72rem;
+    font-weight:600;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    padding:2px 8px;
+    border-radius:100px;
+    margin-left:8px;
+    white-space:nowrap;
+    display:inline-block;
+  }
+  .tag-cooper{background:var(--cooper-wash);color:var(--cooper-deep);}
+  .tag-tucker{background:var(--tucker-wash);color:var(--tucker-deep);}
+  .tag-both{background:#ecebe4;color:#4a4b43;}
+  .tag-family{background:var(--scout-wash);color:var(--scout-deep);}
+
+  /* Kid blocks */
+  .kid-cooper .grade{background:var(--cooper-wash);color:var(--cooper-deep);}
+  .kid-tucker .grade{background:var(--tucker-wash);color:var(--tucker-deep);}
+  .kid-cooper .sec-title{color:var(--cooper-deep);}
+  .kid-tucker .sec-title{color:var(--tucker-deep);}
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:20px 22px;
+    margin-bottom:14px;
+  }
+  .card.cooper{border-left:5px solid var(--cooper);}
+  .card.tucker{border-left:5px solid var(--tucker);}
+
+  .card h3{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:1.18rem;
+    margin:0 0 3px;
+  }
+  .card .from{
+    font-size:.82rem;
+    color:var(--ink-soft);
+    margin:0 0 14px;
+  }
+  .card ul{margin:0;padding-left:0;list-style:none;}
+  .card li{
+    position:relative;
+    padding:6px 0 6px 22px;
+    border-top:1px solid #f0ece2;
+  }
+  .card li:first-child{border-top:none;}
+  .card.cooper li::before{content:"";position:absolute;left:2px;top:14px;width:7px;height:7px;border-radius:50%;background:var(--cooper);}
+  .card.tucker li::before{content:"";position:absolute;left:2px;top:14px;width:7px;height:7px;border-radius:50%;background:var(--tucker);}
+  .card li b{font-weight:600;}
+
+  .peek{
+    background:var(--cooper-wash);
+    border:1px solid var(--cooper-line);
+    border-left:5px solid var(--cooper);
+  }
+  .peek h3{color:var(--cooper-deep);}
+  .peek .subjects{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 20px;
+    margin-top:4px;
+  }
+  .peek .subjects div{
+    padding:8px 0;
+    border-top:1px solid var(--cooper-line);
+    font-size:.94rem;
+  }
+  .peek .subjects .lbl{
+    display:block;
+    font-size:.72rem;
+    font-weight:600;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--cooper-deep);
+    margin-bottom:1px;
+  }
+  .starnote{
+    margin-top:14px;
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:.96rem;
+    color:var(--cooper-deep);
+  }
+
+  /* Sports & activities */
+  .sports .sec-title{color:var(--sport-deep);}
+  .sport-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+  }
+  .sport-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-left:5px solid var(--sport);
+    border-radius:14px;
+    padding:18px 20px;
+  }
+  .sport-card .badge{
+    font-size:.7rem;
+    font-weight:600;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--sport-deep);
+    background:var(--sport-wash);
+    padding:2px 9px;
+    border-radius:100px;
+    display:inline-block;
+    margin-bottom:8px;
+  }
+  .sport-card h3{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:1.14rem;
+    margin:0 0 2px;
+  }
+  .sport-card .who-line{
+    font-size:.8rem;
+    color:var(--ink-soft);
+    margin:0 0 12px;
+  }
+  .sport-card .who-line .chip{
+    font-weight:600;
+    padding:1px 7px;
+    border-radius:100px;
+    font-size:.72rem;
+  }
+  .sport-card .this-week{
+    background:var(--sport-wash);
+    border-radius:9px;
+    padding:9px 12px;
+    font-size:.9rem;
+    font-weight:600;
+    color:var(--sport-deep);
+    margin-bottom:12px;
+  }
+  .sport-card .this-week span{display:block;font-weight:500;color:var(--ink-soft);font-size:.8rem;margin-top:1px;}
+  .sport-card dl{margin:0;font-size:.86rem;}
+  .sport-card dl div{display:flex;gap:8px;padding:3px 0;border-top:1px solid #f0ece2;}
+  .sport-card dl div:first-child{border-top:none;}
+  .sport-card dt{flex:0 0 74px;color:var(--ink-soft);font-weight:500;}
+  .sport-card dd{margin:0;flex:1;font-weight:500;}
+
+  /* Cub Scouts */
+  .scouts .sec-title{color:var(--scout-deep);}
+  .scout-card{
+    background:var(--scout-wash);
+    border:1px solid var(--scout-line);
+    border-left:5px solid var(--scout);
+    border-radius:14px;
+    padding:20px 22px;
+  }
+  .scout-card h3{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:1.18rem;
+    margin:0 0 3px;
+    color:var(--scout-deep);
+  }
+  .scout-card .from{font-size:.82rem;color:var(--ink-soft);margin:0 0 14px;}
+  .scout-card .dinner{
+    background:#fff;
+    border:1px solid var(--scout-line);
+    border-radius:10px;
+    padding:12px 14px;
+    margin-bottom:14px;
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .scout-card .dinner .big{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:1.15rem;
+    color:var(--scout-deep);
+  }
+  .scout-card .dinner .meta{font-size:.9rem;color:var(--ink-soft);font-weight:500;}
+  .scout-card ul{margin:0;padding-left:0;list-style:none;}
+  .scout-card li{
+    position:relative;
+    padding:6px 0 6px 22px;
+    border-top:1px solid var(--scout-line);
+    font-size:.94rem;
+  }
+  .scout-card li:first-child{border-top:none;}
+  .scout-card li::before{content:"";position:absolute;left:2px;top:14px;width:7px;height:7px;border-radius:50%;background:var(--scout);}
+
+  /* Lunch grid */
+  .lunch-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+  }
+  .day{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+  }
+  .day .head{
+    background:#f4efe4;
+    padding:10px 12px;
+    border-bottom:1px solid var(--line);
+  }
+  .day .dow{
+    font-weight:700;
+    font-size:.95rem;
+    letter-spacing:.02em;
+  }
+  .day .dnum{
+    font-size:.78rem;
+    color:var(--ink-soft);
+  }
+  .day .body{padding:11px 12px;flex:1;}
+  .day .main{
+    font-weight:600;
+    font-size:.9rem;
+    margin-bottom:8px;
+    line-height:1.35;
+  }
+  .day .sides{
+    list-style:none;margin:0;padding:0;
+    font-size:.8rem;
+    color:var(--ink-soft);
+  }
+  .day .sides li{padding:1.5px 0;}
+  .noschool .body{display:flex;align-items:center;justify-content:center;color:var(--ink-soft);font-style:italic;font-size:.85rem;padding:22px 12px;}
+
+  /* Footer */
+  .footer{
+    margin-top:40px;
+    padding-top:20px;
+    border-top:2px solid var(--ink);
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 26px;
+    font-size:.9rem;
+  }
+  .footer a{color:var(--cooper-deep);text-decoration:none;font-weight:600;border-bottom:1px solid var(--cooper-line);}
+  .footer .lbl{color:var(--ink-soft);font-weight:500;}
+
+  .placeholder{
+    border:1.5px dashed #c9c2b2;
+    border-radius:10px;
+    padding:14px 16px;
+    color:var(--ink-soft);
+    font-style:italic;
+    background:repeating-linear-gradient(45deg,transparent,transparent 8px,#f6f2e8 8px,#f6f2e8 16px);
+  }
+
+  @media (max-width:640px){
+    .lunch-grid{grid-template-columns:1fr 1fr;}
+    .peek .subjects{grid-template-columns:1fr;}
+    .sport-grid{grid-template-columns:1fr;}
+    .cal-list li{flex-direction:column;gap:2px;}
+    .cal-when{flex:none;}
+    .cal-what .who{margin-left:0;}
+  }
+  @media (max-width:400px){
+    .lunch-grid{grid-template-columns:1fr;}
+  }
+
+  @media print{
+    body{background:#fff;}
+    .sheet{max-width:100%;padding:0 6px;}
+    .card,.day,.calendar,.peek,.sport-card,.scout-card{box-shadow:none;}
+    section{page-break-inside:avoid;}
+    a{color:var(--ink) !important;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <div class="kicker">Minnewashta Elementary · The Truitt Family</div>
+    <h1>The Weekly Update</h1>
+    <div class="dateline">Week of <b>September 8–11, 2026</b></div>
+  </header>
+
+  <!-- CALENDAR -->
+  <section>
+    <div class="calendar">
+      <h2>Mark your calendar</h2>
+      <p class="sub">Key dates from school, sports, and Scouts — listed in order.</p>
+      <ul class="cal-list">
+        <li>
+          <div class="cal-when">Wed, Sep 9<small>5:30–7:00 PM</small></div>
+          <div class="cal-what">Lacrosse fall clinic at Badger Park — first session<span class="who tag-both">Both</span></div>
+        </li>
+        <li>
+          <div class="cal-when">Thu, Sep 10<small>5:15–5:45 PM</small></div>
+          <div class="cal-what">Wings Virtual Curriculum Night — join by Google Meet<span class="who tag-cooper">Cooper</span></div>
+        </li>
+        <li>
+          <div class="cal-when">Thu, Sep 10<small>6:00 PM</small></div>
+          <div class="cal-what">Football practice at Scenic Heights<span class="who tag-cooper">Cooper</span></div>
+        </li>
+        <li>
+          <div class="cal-when">Thu, Sep 10<small>6:45 PM</small></div>
+          <div class="cal-what">1st Grade Curriculum Night with Ms. Morales<span class="who tag-tucker">Tucker</span></div>
+        </li>
+        <li>
+          <div class="cal-when">Sat, Sep 12<small>4:30–6:30 PM</small></div>
+          <div class="cal-what">Cub Scout Pack 429 Welcome Dinner &amp; wreath-sale kickoff — at Freeman<span class="who tag-family">Family</span></div>
+        </li>
+        <li>
+          <div class="cal-when">Sat, Sep 12</div>
+          <div class="cal-what">Football — first Saturday games (check SportsEngine for time)<span class="who tag-cooper">Cooper</span></div>
+        </li>
+        <li>
+          <div class="cal-when">Sun, Sep 13<small>5:30–7:00 PM</small></div>
+          <div class="cal-what">Lacrosse fall clinic at Badger Park<span class="who tag-both">Both</span></div>
+        </li>
+        <li>
+          <div class="cal-when">Mon–Tue, Sep 14–15</div>
+          <div class="cal-what">NWEA Math assessment<span class="who tag-cooper">Cooper</span></div>
+        </li>
+        <li>
+          <div class="cal-when">Tue, Sep 15<small>1:15–2:15 PM</small></div>
+          <div class="cal-what">Wings begins (Day 4) — first class with Ms. McGinn<span class="who tag-cooper">Cooper</span></div>
+        </li>
+        <li>
+          <div class="cal-when">Wed, Sep 16</div>
+          <div class="cal-what">Hearing &amp; vision screening<span class="who tag-cooper">Cooper</span></div>
+        </li>
+        <li>
+          <div class="cal-when">Thu, Sep 17<small>6:45–7:30 PM</small></div>
+          <div class="cal-what">3rd Grade Curriculum Night with Mr. Luhmann<span class="who tag-cooper">Cooper</span></div>
+        </li>
+        <li>
+          <div class="cal-when">Thu–Fri, Sep 17–18</div>
+          <div class="cal-what">NWEA Reading assessment (English)<span class="who tag-cooper">Cooper</span></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SPORTS & ACTIVITIES -->
+  <section class="sports">
+    <h2 class="sec-title">Sports &amp; activities</h2>
+    <div class="sport-grid">
+
+      <div class="sport-card">
+        <div class="badge">Football</div>
+        <h3>Tonka Youth Football</h3>
+        <p class="who-line"><span class="chip tag-cooper">Cooper</span> &nbsp;3rd Grade · Team 7 · Coach Paul Lyons</p>
+        <div class="this-week">This week: Practice Thu, Sep 10 · 6:00 PM<span>First Saturday games begin Sep 12</span></div>
+        <dl>
+          <div><dt>Practice</dt><dd>Thursdays, 6:00 PM at Scenic Heights</dd></div>
+          <div><dt>Games</dt><dd>Saturdays (occasional Wed) — details in SportsEngine</dd></div>
+          <div><dt>Gear</dt><dd>Helmet, mouthguard, shoulder pads, practice jersey</dd></div>
+          <div><dt>Team mgr</dt><dd>Britney</dd></div>
+        </dl>
+      </div>
+
+      <div class="sport-card">
+        <div class="badge">Lacrosse</div>
+        <h3>Tonka Fall Clinics</h3>
+        <p class="who-line"><span class="chip tag-cooper">Cooper</span> <span class="chip tag-tucker">Tucker</span> &nbsp;Minnetonka Lacrosse · 8U/10U</p>
+        <div class="this-week">This week: Wed, Sep 9 &amp; Sun, Sep 13 · 5:30–7:00 PM<span>10 sessions total through Oct 11</span></div>
+        <dl>
+          <div><dt>When</dt><dd>Wednesdays &amp; Sundays, Sep 9–Oct 11</dd></div>
+          <div><dt>Time</dt><dd>5:30–7:00 PM (8U &amp; 10U)</dd></div>
+          <div><dt>Where</dt><dd>Badger Park</dd></div>
+          <div><dt>Gear</dt><dd>Full equipment required</dd></div>
+        </dl>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CUB SCOUTS -->
+  <section class="scouts">
+    <h2 class="sec-title">Cub Scouts <span class="grade" style="background:var(--scout-wash);color:var(--scout-deep);">Pack 429</span></h2>
+    <div class="scout-card">
+      <h3>Wreath sale season kicks off</h3>
+      <p class="from">Jeff &amp; Britney are co-chairing this year's Evergreen wreath fundraiser</p>
+      <div class="dinner">
+        <span class="big">Welcome Dinner — Sat, Sep 12</span>
+        <span class="meta">4:30–6:30 PM · at Freeman</span>
+      </div>
+      <ul>
+        <li>Order packets go home at the Welcome Dinner — this year's lineup adds a new <b>Porch Pot Kit</b> and refreshed pricing.</li>
+        <li><b>Orders due to Jeff &amp; Britney by Tue, Oct 20</b> (the week before MEA); wreath delivery lands Nov 12–14.</li>
+        <li>Orders are submitted electronically this year through the Pack 429 email; den leaders help track who's turned theirs in.</li>
+        <li>Sales-pitch coaching for the kids may be added to a September den meeting.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- COOPER -->
+  <section class="kid-cooper">
+    <h2 class="sec-title">Cooper <span class="grade">3rd Grade · Spanish Immersion</span></h2>
+
+    <div class="card cooper">
+      <h3>From Mr. Luhmann</h3>
+      <p class="from">Homeroom · Third Grade Spanish Immersion</p>
+      <ul>
+        <li><b>Check the take-home folder daily</b> for the Agenda / Academic Planner — it tracks homework, assignments, and the day's specials, and travels between home and school every day.</li>
+        <li><b>Send a healthy snack from home</b> each day to keep energy and focus up.</li>
+        <li><b>NWEA Fall assessments are coming</b> — Math on Sep 14–15 and Reading on Sep 17–18. A good night's sleep and breakfast help.</li>
+        <li>A hard copy of the first newsletter came home this week; going forward, newsletters will be shared electronically.</li>
+      </ul>
+    </div>
+
+    <div class="card peek">
+      <h3>A peek at what we're learning</h3>
+      <p class="from">This week in Room — new curriculum launches</p>
+      <div class="subjects">
+        <div><span class="lbl">Reading / Language</span>Benchmark Adelante — Launch Unit reviewing fundamental skills; building reading &amp; writing routines and a community of learners.</div>
+        <div><span class="lbl">Math</span>Whole numbers, equivalent names for numbers, addition &amp; subtraction, and number patterns.</div>
+        <div><span class="lbl">Science</span>Routines for science class; the scientific method.</div>
+        <div><span class="lbl">Health</span>"I like your attitude!"</div>
+        <div><span class="lbl">Social Studies</span>Where in the world is our community?</div>
+        <div><span class="lbl">Community</span>Star of the Week begins — every student gets five consecutive days in the spotlight.</div>
+      </div>
+      <p class="starnote">Madeleine is the very first Star of the Week. ⭐</p>
+    </div>
+
+    <div class="card cooper">
+      <h3>From Ms. McGinn</h3>
+      <p class="from">Wings · Advanced Learning</p>
+      <ul>
+        <li><b>Wings starts Tuesday, Sep 15</b> — Cooper's group meets on <b>Day 4, 1:15–2:15 PM</b>, then once every 6-day rotation (dates posted on student folders). Nothing to prepare for the first class.</li>
+        <li><b>Weekly contract routine</b> begins after the first class: a family discussion item, a choice extension activity, and a guardian signature each week.</li>
+        <li><b>Virtual Curriculum Night: Thu, Sep 10, 5:15–5:45 PM</b> via Google Meet — <a href="https://meet.google.com/raa-dhma-foe">meet.google.com/raa-dhma-foe</a>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TUCKER -->
+  <section class="kid-tucker">
+    <h2 class="sec-title">Tucker <span class="grade">1st Grade</span></h2>
+
+    <div class="card tucker">
+      <h3>From Ms. Morales</h3>
+      <p class="from">1st Grade · Newsletters come home every Friday</p>
+      <p class="from" style="margin-top:-8px;font-style:italic;">"Day 1–6" = the school's rolling 6-day rotation, not calendar dates — the days shift each week.</p>
+      <ul>
+        <li><b>Worksheets in the clear folder</b> — review them with Tucker and help finish anything left incomplete. These are extra practice, not homework.</li>
+        <li><b>PE on Days 2 and 5</b> — this week that's <b>Tue 9/8 &amp; Fri 9/11</b>. Send comfortable shoes those days.</li>
+        <li><b>Curriculum Night: Thu, Sep 10 at 6:45 PM</b> — hope to see you there.</li>
+        <li><b>Volunteers wanted</b> for school and class projects, 12:20–1:05 PM. Let Ms. Morales know if you're available.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- LUNCH -->
+  <section>
+    <h2 class="sec-title">This week's lunch</h2>
+    <div class="lunch-grid">
+      <div class="day noschool">
+        <div class="head"><div class="dow">Monday</div><div class="dnum">Sep 7</div></div>
+        <div class="body">No school — Labor Day</div>
+      </div>
+      <div class="day">
+        <div class="head"><div class="dow">Tuesday</div><div class="dnum">Sep 8</div></div>
+        <div class="body">
+          <div class="main">Mini Maple Pancakes &middot; Yogurt Parfait Bento Box</div>
+          <ul class="sides">
+            <li>Turkey sausage link</li>
+            <li>Hashbrown patties</li>
+            <li>Edamame</li>
+            <li>Fruit choice &amp; milk</li>
+          </ul>
+        </div>
+      </div>
+      <div class="day">
+        <div class="head"><div class="dow">Wednesday</div><div class="dnum">Sep 9</div></div>
+        <div class="body">
+          <div class="main">Garlic Mozzarella Twisted Breadstick &middot; Skipper Bento</div>
+          <ul class="sides">
+            <li>Marinara cup</li>
+            <li>Sugar snap peas</li>
+            <li>Romaine w/ ranch</li>
+            <li>Fruit choice &amp; milk</li>
+          </ul>
+        </div>
+      </div>
+      <div class="day">
+        <div class="head"><div class="dow">Thursday</div><div class="dnum">Sep 10</div></div>
+        <div class="body">
+          <div class="main">Rotini Pasta — meat or Alfredo sauce</div>
+          <ul class="sides">
+            <li>Garlic breadstick</li>
+            <li>Steamed broccoli</li>
+            <li>Fruit choice &amp; milk</li>
+          </ul>
+        </div>
+      </div>
+      <div class="day">
+        <div class="head"><div class="dow">Friday</div><div class="dnum">Sep 11</div></div>
+        <div class="body">
+          <div class="main">Turkey Tacos w/ refried beans</div>
+          <ul class="sides">
+            <li>Tostitos &amp; cheddar</li>
+            <li>Romaine &amp; pico de gallo</li>
+            <li>Seasoned corn</li>
+            <li>Apple slices &amp; milk</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div><span class="lbl">Lunch menu:</span> <a href="https://minnetonka.nutrislice.com/menu/minnewashta/lunch/">minnewashta / lunch</a></div>
+    <div><span class="lbl">Football &amp; games:</span> <a href="https://www.sportsengine.com/">SportsEngine app</a></div>
+    <div><span class="lbl">Wings Curriculum Night:</span> <a href="https://meet.google.com/raa-dhma-foe">meet.google.com/raa-dhma-foe</a></div>
+  </footer>
+
+</div>
+</body>
+</html>
