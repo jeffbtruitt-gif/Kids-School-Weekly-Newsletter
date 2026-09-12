@@ -1,0 +1,1 @@
+Connector write test — committed by Claude on 2026-09-12. Safe to delete.
