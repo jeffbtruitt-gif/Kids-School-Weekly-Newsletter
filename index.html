@@ -441,6 +441,25 @@
   .nl-btn:hover{background:var(--tucker-deep);}
   @media print{.nl-btn{background:none;color:var(--ink);border:1px solid var(--ink);}}
 </style>
+<script>
+/* Home-screen freshness check: when the saved app is opened or brought back to the
+   front, fetch the live page past every cache and reload if the content changed. */
+(function(){
+  function norm(t){return (t||'').replace(/\s+/g,' ').trim();}
+  function check(){
+    var url=location.pathname+'?fresh='+Date.now();
+    fetch(url,{cache:'no-store'}).then(function(r){return r.ok?r.text():null;}).then(function(html){
+      if(!html||!document.body)return;
+      var fresh=new DOMParser().parseFromString(html,'text/html');
+      if(norm(fresh.body&&fresh.body.textContent)===norm(document.body.textContent))return;
+      var n=0;try{n=+sessionStorage.getItem('wu-reloads')||0;sessionStorage.setItem('wu-reloads',n+1);}catch(e){}
+      if(n<2)location.replace(location.pathname+'?v='+Date.now());
+    }).catch(function(){});
+  }
+  window.addEventListener('pageshow',check);
+  document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible')check();});
+})();
+</script>
 </head>
 <body>
 <div class="sheet">
