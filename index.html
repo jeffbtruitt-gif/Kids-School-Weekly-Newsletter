@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Weekly Update — Nov 9–13, 2026</title>
+<title>The Weekly Update — Nov 16–20, 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -425,6 +425,21 @@
     section{page-break-inside:avoid;}
     a{color:var(--ink) !important;}
   }
+
+  /* Homework list + newsletter link (added Nov 16 build) */
+  .hw{background:var(--tucker-wash);border:1px solid var(--tucker-line);border-radius:10px;padding:12px 14px;margin:0 0 14px;}
+  .hw.cooper-hw{background:var(--cooper-wash);border-color:var(--cooper-line);}
+  .hw h4{margin:0 0 6px;font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--tucker-deep);}
+  .hw.cooper-hw h4{color:var(--cooper-deep);}
+  .card .hw ul li{padding:5px 0 5px 0;border-top:1px solid var(--tucker-line);font-size:.93rem;}
+  .card .hw.cooper-hw ul li{border-top-color:var(--cooper-line);}
+  .card .hw ul li:first-child{border-top:none;}
+  .card .hw ul li::before{display:none;}
+  .hw .d{display:inline-block;min-width:82px;font-weight:700;}
+  .nl-btn{display:inline-block;margin:0 0 14px;padding:7px 14px;border-radius:100px;font-size:.86rem;font-weight:600;text-decoration:none;background:var(--tucker);color:#fff;}
+  .card a[href^="mailto"]{overflow-wrap:anywhere;}
+  .nl-btn:hover{background:var(--tucker-deep);}
+  @media print{.nl-btn{background:none;color:var(--ink);border:1px solid var(--ink);}}
 </style>
 </head>
 <body>
@@ -433,13 +448,13 @@
   <header class="masthead">
     <div class="kicker">Minnewashta Elementary · The Truitt Family</div>
     <h1>The Weekly Update</h1>
-    <div class="dateline">Week of <b>November 9 – 13, 2026</b></div>
+    <div class="dateline">Week of <b>November 16 – 20, 2026</b></div>
   </header>
 
   <!-- MORNING REMINDER -->
   <section style="margin-top:22px;">
     <div style="background:#fff6e6;border:1px solid #f0d9a8;border-left:5px solid var(--tucker);border-radius:12px;padding:12px 18px;font-size:.95rem;color:var(--ink);">
-      <b>Every morning:</b> pack a snack for each boy (keep candy/treats light this week — Mr. Luhmann's asked families to help kids stay focused), and make sure <b>Cooper's planner (Agenda)</b> is in his backpack and coming home each night. Send a jacket for outdoor recess. It's <b>assessment week</b> for Cooper's class — a good night's sleep and real breakfast help.
+      <b>It's Spirit Week + the ICA Food Drive!</b> Both boys can dress up each day: <b>Mon</b> pajamas/comfy · <b>Tue</b> tie-dye/rainbow · <b>Wed</b> "fanatic" (dress as a fan of a team, character, anything) · <b>Thu</b> hat day · <b>Fri</b> Tonka Pride (or 1950s for Tucker's 50th Day). Send a food-shelf donation any day — bins are in the front hallway by the office. It's getting cold: <b>labeled</b> jacket, hat, gloves and boots every day.
     </div>
   </section>
 
@@ -447,59 +462,59 @@
   <section>
     <div class="calendar">
       <h2>Mark your calendar</h2>
-      <p class="sub">Key dates from school and Scouts — listed in order. <i>"Day 1–6" is the school's rolling 6-day rotation, not calendar dates — it shifts every week; this week Mon=Day 2, Tue=Day 3, Wed=Day 4, Thu=Day 5, Fri=Day 6.</i></p>
+      <p class="sub">Key dates from school, activities and Scouts — listed in order. <i>"Day 1–6" is the school's rolling 6-day rotation, not calendar dates — it shifts every week; this week Mon=Day 1, Tue=Day 2, Wed=Day 3, Thu=Day 4, Fri=Day 5.</i></p>
       <ul class="cal-list">
         <li>
-          <div class="cal-when">Mon, Nov 9<small>Day 2</small></div>
-          <div class="cal-what">PRIME returns to Minnewashta — 10 extra minutes of play, daily<span class="who tag-both">Both</span></div>
+          <div class="cal-when">Mon–Fri<small>Nov 16–20</small></div>
+          <div class="cal-what">School-wide Food Drive for the ICA Food Shelf (1st grade is leading it) + daily dress-up themes<span class="who tag-both">Both</span></div>
         </li>
         <li>
-          <div class="cal-when">Tue, Nov 10<small>Day 3</small></div>
-          <div class="cal-what">Math Unit 2 Assessment #1 (place value &amp; comparing larger numbers) came home — review glows/grows together<span class="who tag-cooper">Cooper</span></div>
+          <div class="cal-when">Mon, Nov 16<small>Day 1</small></div>
+          <div class="cal-what">Pajama / comfy day. Class starts sharing the optional Thanksgiving "dress the turkey" homework<span class="who tag-tucker">Tucker</span></div>
         </li>
         <li>
-          <div class="cal-when">Wed, Nov 11<small>Day 4 · 1:15–2:15 PM</small></div>
-          <div class="cal-what">Wings meets<span class="who tag-cooper">Cooper</span></div>
+          <div class="cal-when">Tue, Nov 17<small>Day 2</small></div>
+          <div class="cal-what">Tie-dye / rainbow day<span class="who tag-both">Both</span></div>
         </li>
         <li>
-          <div class="cal-when">Wed, Nov 11<small>12:20–1:00 PM</small></div>
-          <div class="cal-what"><i>Libros Compartidos</i> change day — bring the blue folder with books &amp; reading log. No parent volunteer signed up yet for this slot — <a href="https://www.signupgenius.com/go/904084EACA82CA5F85-66730934-libros#/">sign up here</a> if you can help<span class="who tag-tucker">Tucker</span></div>
+          <div class="cal-when">Tue, Nov 17<small>3:25–4:25 PM</small></div>
+          <div class="cal-what">Solar Cars (Community Ed) after school, Room 115 — 3rd of 4 sessions<span class="who tag-both">Both</span></div>
         </li>
         <li>
-          <div class="cal-when">Thu, Nov 12<small>Day 5</small></div>
-          <div class="cal-what">Next book checkout day. Estrella de la semana (star of the week): <b>Violet</b><span class="who tag-cooper">Cooper</span></div>
+          <div class="cal-when">Tue, Nov 17<small>6:00 PM</small></div>
+          <div class="cal-what">PTO Meeting, Port<span class="who tag-both">Both</span></div>
         </li>
         <li>
-          <div class="cal-when">Thu–Sat<small>Nov 12–14</small></div>
-          <div class="cal-what">Pack 429 wreath order delivery window — co-chairs requested Saturday, Nov 14; Evergreen Industries will call 2–3 days ahead with the exact day/time once routes are set<span class="who tag-family">Scouts</span></div>
+          <div class="cal-when">Wed, Nov 18<small>Day 3</small></div>
+          <div class="cal-what">"Fanatic" day. <i>Libros Compartidos</i> change day — bring the blue folder. Volunteer still needed 12:20–1:00 — <a href="https://www.signupgenius.com/go/904084EACA82CA5F85-66730934-libros#/">sign up here</a><span class="who tag-tucker">Tucker</span></div>
         </li>
         <li>
-          <div class="cal-when">Fri, Nov 13<small>Day 6</small></div>
-          <div class="cal-what">English homework due — two Scholastic News readings &amp; quizzes (neither returns to school)<span class="who tag-cooper">Cooper</span></div>
+          <div class="cal-when">Thu, Nov 19<small>Day 4 · 1:15–2:15 PM</small></div>
+          <div class="cal-what">Hat day. Wings meets<span class="who tag-cooper">Cooper</span></div>
         </li>
         <li>
-          <div class="cal-when">Looking<br>ahead</div>
-          <div class="cal-what">School-wide Food Drive for the ICA Food Shelf — <b>Nov 16–20</b><span class="who tag-both">Both</span></div>
+          <div class="cal-when">Thu, Nov 19<small>6:00–8:30 PM</small></div>
+          <div class="cal-what">PTO Family Service Night, MWA cafeteria/gym<span class="who tag-both">Both</span></div>
         </li>
         <li>
-          <div class="cal-when">Looking<br>ahead</div>
-          <div class="cal-what">Special Thanksgiving homework (optional) begins sharing <b>Mon, Nov 16</b><span class="who tag-tucker">Tucker</span></div>
+          <div class="cal-when">Fri, Nov 20<small>Day 5</small></div>
+          <div class="cal-what">Tonka Pride day. <b>English spelling test</b> + English homework packet due. Next book checkout. Estrella de la semana: <b>Cannon</b><span class="who tag-cooper">Cooper</span></div>
         </li>
         <li>
-          <div class="cal-when">Looking<br>ahead</div>
-          <div class="cal-what">PTO Meeting, 6:00 PM, Port — <b>Tue, Nov 17</b><span class="who tag-both">Both</span></div>
-        </li>
-        <li>
-          <div class="cal-when">Looking<br>ahead</div>
-          <div class="cal-what">PTO Family Service Night, 6:00–8:30 PM, MWA cafeteria/gym — <b>Thu, Nov 19</b><span class="who tag-both">Both</span></div>
+          <div class="cal-when">Fri, Nov 20<small>Day 5</small></div>
+          <div class="cal-what">50th Day of School! Dress 1950s style or Tonka Pride. Turn in the week's Home Links<span class="who tag-tucker">Tucker</span></div>
         </li>
         <li>
           <div class="cal-when">Looking<br>ahead</div>
-          <div class="cal-what">50th Day of School celebration — dress in 1950s style or Tonka Pride gear — <b>Fri, Nov 20</b><span class="who tag-tucker">Tucker</span></div>
+          <div class="cal-what">Short week: Mon 11/23 = Day 6, Tue 11/24 = Day 1 (last Solar Cars session, 3:25 PM). <b>No School Wed–Fri, Nov 25–27</b> (Thanksgiving Break)<span class="who tag-both">Both</span></div>
         </li>
         <li>
           <div class="cal-when">Looking<br>ahead</div>
-          <div class="cal-what">No School — Thanksgiving Break — <b>Nov 25–27</b><span class="who tag-both">Both</span></div>
+          <div class="cal-what">Wreath fundraiser Friends &amp; Family online store link — share by <b>Mon, Dec 7</b><span class="who tag-family">Scouts</span></div>
+        </li>
+        <li>
+          <div class="cal-when">Looking<br>ahead</div>
+          <div class="cal-what">1st grade Winter party (Spanish contract signing), 1:30–2:30 PM — <b>Tue, Dec 22</b><span class="who tag-tucker">Tucker</span></div>
         </li>
         <li>
           <div class="cal-when">Looking<br>ahead</div>
@@ -509,17 +524,36 @@
     </div>
   </section>
 
+  <!-- ACTIVITIES -->
+  <section class="sports">
+    <h2 class="sec-title">Activities</h2>
+    <div class="sport-grid">
+      <div class="sport-card">
+        <span class="badge">Community Ed</span>
+        <h3>Solar Cars</h3>
+        <p class="who-line"><span class="chip tag-cooper">Cooper</span> <span class="chip tag-tucker">Tucker</span> · Minnetonka Community Education exploration class</p>
+        <div class="this-week">Tue, Nov 17 · 3:25–4:25 PM<span>Session 3 of 4 · final class Tue, Nov 24</span></div>
+        <dl>
+          <div><dt>Where</dt><dd>Minnewashta Elementary, Room 115</dd></div>
+          <div><dt>Pickup</dt><dd>4:25 PM at school</dd></div>
+          <div><dt>Contact</dt><dd>MCE front desk 952-401-6800 · class is cancelled if school closes (make-up emailed)</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
   <!-- CUB SCOUTS -->
   <section class="scouts">
     <h2 class="sec-title">Cub Scouts <span class="grade" style="background:var(--scout-wash);color:var(--scout-deep);">Pack 429</span></h2>
     <div class="scout-card">
-      <h3>Wreath orders arrive this week</h3>
-      <p class="from">Jeff &amp; Rachel Popken are co-chairing this year's holiday-greens wreath fundraiser</p>
+      <h3>Wreaths are delivered — now hand them out</h3>
+      <p class="from">Jeff &amp; Britney co-chair this year's holiday wreath fundraiser</p>
       <ul>
-        <li>Evergreen Industries has the pack's full order — 353 items total — confirmed for delivery <b>Nov 12–14</b>, with a request for <b>Saturday, Nov 14</b>. They'll call 2–3 days ahead with routing details; as of this morning Jeff was still waiting on that confirmation call.</li>
-        <li>No shipping to individual families — the pack picks everything up together and scouts hand-deliver their own orders.
-          <span class="placeholder" style="display:block;margin-top:6px;">Exact pickup time/location and how wreaths get sorted by scout weren't in a family-facing email yet — watch for a Pack 429 message once the delivery day is locked in.</span>
+        <li>Evergreen Industries delivered the pack's order <b>Saturday, Nov 14 (8–10 AM)</b> at the Minnewashta bus turnaround, and families picked up there. Scouts now hand-deliver their own customers' wreaths.</li>
+        <li>A few families were out of town Saturday and have asked about alternate pickup (one suggested the Tuesday meeting).
+          <span class="placeholder" style="display:block;margin-top:6px;">No pack-wide email has set the make-up pickup time/place yet — confirm with the pack before Tuesday.</span>
         </li>
+        <li>Friends &amp; Family online store (supporters order directly from Evergreen): share the link by <b>Mon, Dec 7</b>.</li>
         <li>Save the date: Pack 429 family dinner at Victoria Burrow, <b>Sunday, Jan 10, 2027, 1:00 PM</b>.</li>
       </ul>
     </div>
@@ -531,20 +565,21 @@
 
     <div class="card cooper">
       <h3>From Mr. Luhmann</h3>
-      <p class="from">Homeroom · Third Grade Spanish Immersion</p>
+      <p class="from">Homeroom · Third Grade Spanish Immersion · newsletter "Noticias de 3er grado," Nov 16–20</p>
       <ul>
-        <li><b>PRIME returns Mon, Nov 9</b> — 10 extra minutes of play, daily.</li>
-        <li>It's the end of the first quarter and the end of the first Language Arts unit, so the class is running assessments throughout the week — good sleep and a good breakfast help.</li>
-        <li><b>Math Unit 2 Assessment #1</b> (place value, comparing larger numbers) came home Tue, Nov 10 — review the glows (strengths) and grows (areas to work on) together. Reteaching is already underway at school.</li>
-        <li>Please double-check snacks/treats sent to school — some kids have been bringing larger amounts of candy, which makes it harder to focus.</li>
-        <li>Next book checkout: <b>Thursday, Nov 12 (Day 5).</b></li>
-        <li>Estrella de la semana (star of the week): <b>Violet.</b></li>
+        <li><b>ICA spirit week</b> — the daily themes are written in Cooper's planner (Agenda): Mon pajama · Tue tie-dye/rainbow · Wed fanatic · Thu hat · Fri Tonka Pride.</li>
+        <li><b>Food Drive Nov 16–20</b> for the ICA Food Shelf — drop items in the grade-level bins in the front hallway any day.</li>
+        <li>Colder weather: check the forecast and send a jacket, hat, gloves and other cold-weather gear for outdoor time.</li>
+        <li>Next book checkout: <b>Friday, Nov 20 (Day 5).</b></li>
+        <li>Estrella de la semana (star of the week): <b>Cannon.</b></li>
+        <li>PTO Meeting Tue 11/17, 6 PM (Port) · PTO Family Service Night Thu 11/19, 6–8:30 PM (MWA cafeteria/gym).</li>
       </ul>
       <div class="peek" style="border-radius:14px;padding:20px 22px;margin-top:14px;">
         <h3 style="margin-bottom:10px;">A peek at what we're learning</h3>
         <div class="subjects">
-          <div><span class="lbl">Reading/Writing</span>Visualizing to make sense of poetry and fiction; building a writing community, brainstorming ideas, and starting writing notebooks — personal narrative.</div>
-          <div><span class="lbl">Math</span>Solving problems with the four operations and explaining patterns in arithmetic; place value and rounding.</div>
+          <div><span class="lbl">Reading</span>Starting Unit 2 — Ways Characters Shape Stories: how characters' actions, traits and motivations drive the plot.</div>
+          <div><span class="lbl">Writing &amp; Grammar</span>Opinion essay; adjectives &amp; adverbs; irregular past-tense and future-tense verbs.</div>
+          <div><span class="lbl">Math</span>Addition and subtraction with regrouping; place value and rounding.</div>
           <div><span class="lbl">Science</span>Structures of Life — Animals.</div>
           <div><span class="lbl">Health</span>"I like your attitude."</div>
           <div><span class="lbl">Social Studies</span>Where in the World Is Our Community?</div>
@@ -555,10 +590,18 @@
     <div class="card cooper">
       <h3>From Ms. McHugh</h3>
       <p class="from">Third Grade English</p>
+      <div class="hw cooper-hw">
+        <h4>Homework this week — assigned Fri 11/13, due Fri 11/20</h4>
+        <ul>
+          <li>Read the attached Scholastic News ("Paddling Into History") — fine to read with a family member.</li>
+          <li>Complete "Be a Quiz Whiz" on the back (they'll correct it together in class).</li>
+          <li>Practice the phonics review pages (-tch words; simple &amp; complete subjects/predicates).</li>
+          <li>Read the Fluency Passage "The Gash" aloud 2–3 times to an adult, then get a <b>parent signature</b>.</li>
+        </ul>
+      </div>
       <ul>
-        <li>Homework due by <b>Friday, Nov 13:</b> two Scholastic News Magazine readings &amp; quizzes — one sent home on paper (answers included so you can check together), one to access online at <a href="https://sn3.scholastic.com/">sn3.scholastic.com</a> (click Students, password <b>Tonka345</b>, find the issue under All Issues).</li>
-        <li>Neither needs to be returned to school — it's practice at home. Kids who do return it get entered in a class drawing for fun.</li>
-        <li>Videos and games are on the Scholastic site too, for extra practice.</li>
+        <li><b>Spelling test Friday, Nov 20</b> on: c, k, ck · the f, l, s, z doubling rule · digraph review · heart words from the Home Connection pages (e.g., <i>carry, busy</i>). Heart words are common words with irregular spellings that kids memorize "by heart" — a heart-word card list came home to practice.</li>
+        <li>No new Scholastic News issue this week — catching up on past magazines/quizzes online at <a href="https://sn3.scholastic.com/">sn3.scholastic.com</a> is optional.</li>
         <li>Questions? Reach her at <a href="mailto:lisa.mchugh@minnetonkaschools.org">lisa.mchugh@minnetonkaschools.org</a>.</li>
       </ul>
     </div>
@@ -567,10 +610,10 @@
       <h3>From Ms. McGinn</h3>
       <p class="from">Wings · Advanced Learning</p>
       <ul>
-        <li>Cooper's Wings group (Mr. Luhmann's homeroom) meets on <b>Day 4, 1:15–2:15 PM</b> — this week that's <b>Wednesday, Nov 11.</b></li>
+        <li>Cooper's Wings group meets on <b>Day 4, 1:15–2:15 PM</b> — this week that's <b>Thursday, Nov 19.</b> (Next week's Day 4 doesn't come until after Thanksgiving.)</li>
         <li>Weekly contract routine: a family-discussion question, a choice extension activity, and a guardian signature on the blue folder each week.</li>
         <li>Questions? Reach her at <a href="mailto:Anne.McGinn@minnetonkaschools.org">Anne.McGinn@minnetonkaschools.org</a>.
-          <span class="placeholder" style="display:block;margin-top:6px;">No weekly Wings update email came in this week beyond the standing schedule — nothing specific to flag for this session.</span>
+          <span class="placeholder" style="display:block;margin-top:6px;">No Wings email came in this week — schedule above is the standing Day 4 slot; check Cooper's folder for any change.</span>
         </li>
       </ul>
     </div>
@@ -582,14 +625,28 @@
 
     <div class="card tucker">
       <h3>From Ms. Morales</h3>
-      <p class="from">1st Grade</p>
+      <p class="from">1st Grade · "First Grade Group Plan," week of Nov 16–20</p>
+      <div class="hw">
+        <h4>Homework this week</h4>
+        <ul>
+          <li><span class="d">Mon 11/16</span>Math Home Link 3.8 · PJ/comfy day</li>
+          <li><span class="d">Tue 11/17</span>Home Link 3.9 · tie-dye/rainbow day</li>
+          <li><span class="d">Wed 11/18</span>Home Link 3.10 · fanatic day · <b>bring blue Libros Compartidos folder</b></li>
+          <li><span class="d">Thu 11/19</span>Home Link 3.11 · hat day</li>
+          <li><span class="d">Fri 11/20</span>No homework · Tonka Pride or 1950s day (50th Day of School)</li>
+        </ul>
+      </div>
+      <a class="nl-btn" href="https://docs.google.com/presentation/d/1TOdbcI0rPMS1nn1jxN0IJ0ioZXR8wtsvhuiamig3qEo/edit?usp=sharing">📄 Full newsletter</a>
       <ul>
-        <li><i>Libros Compartidos</i> change day is <b>Wednesday, Nov 11</b> — send Tucker with his blue folder (books + reading log). No parent volunteer is signed up yet for 12:20–1:00 — <a href="https://www.signupgenius.com/go/904084EACA82CA5F85-66730934-libros#/">sign up here</a> if you're free.</li>
-        <li>Reminder: the reading log is for <b>Spanish books only</b> (Libros Compartidos + curriculum/reading-challenge books heard or read in class) — English books Tucker reads at home don't go on this log.</li>
-        <li>Two math assessments came home this week — take a little time to review them together and talk through what went well.</li>
-        <li>Class pet project update: the Cotton Tamarin twins have arrived! Ms. Morales is taking them home this weekend to start the example journal before the kids begin their own.</li>
-        <li>Optional special Thanksgiving homework came home Nov 10 — the class starts sharing it <b>Monday, Nov 16.</b></li>
-        <li>Questions? Reach her at <a href="mailto:claudia.moralespico@minnetonkaschools.org">claudia.moralespico@minnetonkaschools.org</a>.</li>
+        <li><b>ICA Food Shelf drive</b> is the 1st grade service project — please donate if you can (the item list is on the last page of the newsletter).</li>
+        <li><b>50th Day of School, Fri 11/20</b> — 1950s outfit or Tonka Pride gear.</li>
+        <li><i>Libros Compartidos</i>: a parent volunteer is still needed <b>Wed 11/18, 12:20–1:00</b> — <a href="https://www.signupgenius.com/go/904084EACA82CA5F85-66730934-libros#/">sign up here</a>.</li>
+        <li>Optional Thanksgiving "dress the turkey" homework — sharing starts <b>Mon 11/16</b>.</li>
+        <li><b>What we're learning:</b> LA — fairy tales, fables and realistic fiction, and how families and communities do best when people help each other; syllables with Ff and Dd. Math — finishing Unit 3. Health — safety and medicine (parents who work in these fields are invited to share!). SEL — gratitude and naming emotions.</li>
+        <li><b>High-frequency words:</b> las, los, para, que, se.</li>
+        <li>Label hats, gloves, boots, jackets and scarves, and talk with Tucker about keeping track of his things.</li>
+        <li>Class pet project: classmate Robert has the tamarin twins (Tití &amp; Tutú) this weekend and shares on Monday.</li>
+        <li>Outlook was down Thursday — if you emailed Ms. Morales, she'll reply soon. <a href="mailto:claudia.moralespico@minnetonkaschools.org">claudia.moralespico@minnetonkaschools.org</a></li>
       </ul>
     </div>
   </section>
@@ -599,58 +656,60 @@
     <h2 class="sec-title">This week's lunch</h2>
     <div class="lunch-grid">
       <div class="day">
-        <div class="head"><div class="dow">Monday</div><div class="dnum">Nov 9</div></div>
+        <div class="head"><div class="dow">Monday</div><div class="dnum">Nov 16</div></div>
         <div class="body">
-          <div class="main">French Toast Sticks &middot; Yogurt Parfait Bento Box</div>
+          <div class="main">Beef Sambusa &middot; Lentil Sambusa</div>
           <ul class="sides">
-            <li>Turkey sausage link, seasoned potatoes</li>
-            <li>Fresh carrot sticks, syrup cup</li>
+            <li>Garlic cheese bread, rice</li>
+            <li>Steamed broccoli/carrots/cauliflower, marinara cup</li>
+            <li>Edamame, hummus</li>
             <li>Fruit choice &amp; milk</li>
           </ul>
         </div>
       </div>
       <div class="day">
-        <div class="head"><div class="dow">Tuesday</div><div class="dnum">Nov 10</div></div>
+        <div class="head"><div class="dow">Tuesday</div><div class="dnum">Nov 17</div></div>
         <div class="body">
-          <div class="main">Zoo Crew Chicken Nuggets &middot; Plant-Based Kickin' Nuggets</div>
+          <div class="main">Chicken Tenders &middot; Kickin' Tenders</div>
           <ul class="sides">
-            <li>Sunchips – Original, baked beans</li>
-            <li>Edamame, ketchup &amp; BBQ sauce</li>
+            <li>Garlic knot, mashed potatoes</li>
+            <li>Fresh carrot sticks</li>
+            <li>Ketchup &amp; BBQ sauce</li>
             <li>Fruit choice &amp; milk</li>
           </ul>
         </div>
       </div>
       <div class="day">
-        <div class="head"><div class="dow">Wednesday</div><div class="dnum">Nov 11</div></div>
+        <div class="head"><div class="dow">Wednesday</div><div class="dnum">Nov 18</div></div>
         <div class="body">
-          <div class="main">Cheese Pizza Round &middot; Turkey Pepperoni Pizza Round &middot; Skipper Bento</div>
+          <div class="main">Cheese Pizza Bagels &middot; Pepperoni Pizza Bagels &middot; Skipper Bento</div>
           <ul class="sides">
-            <li>Garlic breadstick, steamed peas</li>
+            <li>Garlic breadstick, steamed green beans</li>
             <li>Romaine w/ ranch</li>
-            <li>Jonny Pop – strawberry banana</li>
+            <li>Black cherry frozen fruit treat</li>
             <li>Fruit choice &amp; milk</li>
           </ul>
         </div>
       </div>
       <div class="day">
-        <div class="head"><div class="dow">Thursday</div><div class="dnum">Nov 12</div></div>
+        <div class="head"><div class="dow">Thursday</div><div class="dnum">Nov 19</div></div>
         <div class="body">
-          <div class="main">Cheese Tortellini &middot; Alfredo Sauce</div>
+          <div class="main">Turkey Tacos (taco meat, Tostitos, cheddar)</div>
           <ul class="sides">
-            <li>Garlic toast, steamed broccoli</li>
-            <li>Fresh cucumber slices</li>
+            <li>Refried beans, seasoned corn</li>
+            <li>Shredded romaine, fresh pico de gallo</li>
             <li>Fruit choice &amp; milk</li>
           </ul>
         </div>
       </div>
       <div class="day">
-        <div class="head"><div class="dow">Friday</div><div class="dnum">Nov 13</div></div>
+        <div class="head"><div class="dow">Friday</div><div class="dnum">Nov 20</div></div>
         <div class="body">
-          <div class="main">Beef Hot Dog &middot; Veggie Dog</div>
+          <div class="main">Mac &amp; Cheese &middot; Chicken Nuggets</div>
           <ul class="sides">
-            <li>Hot dog bun, French fries</li>
-            <li>Steamed green beans, fresh bell peppers</li>
-            <li>Ketchup &amp; mustard, fruit choice &amp; milk</li>
+            <li>Whole grain dinner roll</li>
+            <li>Steamed broccoli, fresh sugar snap peas</li>
+            <li>Ketchup &amp; BBQ sauce, fruit choice &amp; milk</li>
           </ul>
         </div>
       </div>
@@ -659,7 +718,11 @@
 
   <!-- FOOTER -->
   <footer class="footer">
+    <div><span class="lbl">Tucker's newsletter:</span> <a href="https://docs.google.com/presentation/d/1TOdbcI0rPMS1nn1jxN0IJ0ioZXR8wtsvhuiamig3qEo/edit?usp=sharing">Ms. Morales · Nov 16–20</a></div>
+    <div><span class="lbl">Volunteer:</span> <a href="https://www.signupgenius.com/go/904084EACA82CA5F85-66730934-libros#/">Libros Compartidos sign-up</a></div>
     <div><span class="lbl">Lunch menu:</span> <a href="https://minnetonka.nutrislice.com/menu/minnewashta/lunch/">minnewashta / lunch</a></div>
+    <div><span class="lbl">Community Ed:</span> <a href="http://minnetonkaschools.arux.app/account/enrollments">Enrollments</a></div>
+    <div><span class="lbl">Scholastic News:</span> <a href="https://sn3.scholastic.com/">sn3.scholastic.com</a></div>
     <div><span class="lbl">My SSO:</span> <a href="https://sso.minnetonkaschools.org/arms">sso.minnetonkaschools.org</a></div>
     <div><span class="lbl">Skyward:</span> <a href="https://skyward.minnetonkaschools.org/">Family Access</a></div>
     <div><span class="lbl">Seesaw:</span> <a href="https://app.seesaw.me/">app.seesaw.me</a></div>
